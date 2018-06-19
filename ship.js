@@ -11,7 +11,6 @@ function Ship(){
   this.removed = false;
   
   this.hits = function(asteroid) {
-    // if(this.removed)return false;
     var d = dist(this.pos.x, this.pos.y, asteroid.pos.x, asteroid.pos.y);
     if (d < this.r + asteroid.r) {
       return true;
@@ -27,7 +26,6 @@ function Ship(){
   }
 
   this.update = function() {
-    //if(this.removed)return;
     if (this.isBoosting){
       this.boost();
     }
